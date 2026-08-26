@@ -1,0 +1,818 @@
+/* =========================================================
+   Sofy Norcross — hoja de estilos principal
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --blue: #170df2;
+  --blue-dark: #1209b8;
+  --lavender: #d8d6fd;
+  --lavender-soft: #eeecff;
+  --ink: #16161f;
+  --gray: #55555f;
+  --line: #e4e4ec;
+  --white: #ffffff;
+  --font-display: 'Baloo 2', sans-serif;
+  --font-body: 'Poppins', sans-serif;
+  --container: 1180px;
+  --nav-h: 92px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wrap {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--blue);
+  margin: 0;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: var(--blue);
+  font-weight: 600;
+}
+
+/* =========================== Header =========================== */
+
+.site-header {
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(6px);
+  z-index: 100;
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--nav-h);
+}
+
+.logo {
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  font-size: 0.95rem;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.logo:hover {
+  color: var(--blue);
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 44px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  font-size: 1.02rem;
+  color: var(--ink);
+  padding: 6px 2px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.nav-links a:hover {
+  color: var(--blue);
+}
+
+.nav-links a.active {
+  color: var(--blue);
+  border-color: var(--blue);
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.socials a {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8b8b96;
+  border: 1px solid #d7d7e0;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.socials a:hover {
+  color: var(--blue);
+  border-color: var(--blue);
+  background: var(--lavender-soft);
+}
+
+.socials svg {
+  width: 18px;
+  height: 18px;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav-toggle span {
+  width: 100%;
+  height: 2px;
+  background: var(--ink);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* =========================== Buttons =========================== */
+
+.btn {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  padding: 16px 34px;
+  border-radius: 2px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.btn-primary {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: var(--blue-dark);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--blue);
+  border-color: var(--blue);
+}
+
+.btn-outline:hover {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 500;
+  padding: 12px 26px;
+}
+
+.home-link-wrap {
+  text-align: center;
+  margin: 90px 0 60px;
+}
+
+/* =========================== Footer =========================== */
+
+.site-footer {
+  padding: 30px 0 50px;
+  text-align: right;
+  font-size: 0.85rem;
+  color: var(--gray);
+}
+
+/* =========================== Hero (Inicio) =========================== */
+
+.hero {
+  padding: 70px 0 40px;
+}
+
+.hero .wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 60px;
+  align-items: start;
+}
+
+.hero-copy h1 {
+  font-size: 3.4rem;
+  line-height: 1.05;
+  margin-bottom: 22px;
+}
+
+.hero-subtitle {
+  color: var(--blue);
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  font-size: 1.02rem;
+  line-height: 1.8;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+.hero-bird {
+  width: 230px;
+  max-width: 60%;
+}
+
+.hero-photo img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.hero-note {
+  background: var(--lavender);
+  padding: 40px 46px;
+  margin-top: 56px;
+  max-width: 460px;
+  border-radius: 2px;
+}
+
+.hero-note h3 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.hero-note p {
+  margin: 0 0 18px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.hero-note .socials {
+  justify-content: flex-start;
+}
+
+.hero-note .socials a {
+  background: rgba(255, 255, 255, 0.6);
+  border-color: transparent;
+}
+
+/* =========================== Page header (subpages) =========================== */
+
+.page-hero {
+  padding: 70px 0 30px;
+  text-align: center;
+}
+
+.page-hero h1 {
+  font-size: 3.3rem;
+  letter-spacing: 0.04em;
+}
+
+.page-hero .divider {
+  width: 46px;
+  height: 4px;
+  background: var(--ink);
+  margin: 26px auto 34px;
+  border-radius: 2px;
+}
+
+.page-hero .intro {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 1.08rem;
+  color: var(--ink);
+  text-align: justify;
+}
+
+.page-hero.left-align {
+  text-align: left;
+}
+
+.page-hero.left-align .intro {
+  margin: 0;
+}
+
+/* =========================== Quién soy =========================== */
+
+.about-hero {
+  padding: 60px 0 0;
+}
+
+.about-hero .wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 60px;
+  align-items: center;
+}
+
+.about-hero h1 {
+  font-size: 2.9rem;
+  margin-bottom: 36px;
+}
+
+.about-hero-photo img {
+  width: 100%;
+  border-radius: 2px;
+}
+
+.about-hero-text p {
+  margin: 0 0 20px;
+  text-align: justify;
+  color: var(--ink);
+}
+
+.releases {
+  background: var(--lavender-soft);
+  margin-top: 70px;
+  padding: 70px 0;
+}
+
+.releases h2 {
+  font-size: 2.4rem;
+  margin-bottom: 46px;
+}
+
+.release {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 40px;
+  margin-bottom: 54px;
+  align-items: center;
+}
+
+.release:last-child {
+  margin-bottom: 0;
+}
+
+.release>div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.release-cover {
+  width: 100%;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.release-cover img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.release-meta {
+  font-size: 0.98rem;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.release-meta:last-child {
+  margin-bottom: 0;
+  margin-top: 4px;
+}
+
+.release-meta .kind {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.release-meta .kind em {
+  color: var(--ink);
+  font-style: italic;
+}
+
+.release-meta .year {
+  color: var(--gray);
+  margin-bottom: 8px;
+}
+
+.spotify-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.spotify-tag svg {
+  width: 20px;
+  height: 20px;
+  color: #1db954;
+}
+
+.release-text p {
+  margin: 0 0 16px;
+  text-align: justify;
+  color: var(--ink);
+}
+
+.beyond {
+  padding: 80px 0 0;
+}
+
+.beyond .wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: 50px;
+  align-items: center;
+}
+
+.beyond h2 {
+  font-size: 2.3rem;
+  margin-bottom: 22px;
+  line-height: 1.15;
+}
+
+.beyond p {
+  text-align: justify;
+  margin: 0 0 24px;
+}
+
+.beyond-photo img {
+  border-radius: 2px;
+}
+
+.beyond .socials {
+  justify-content: flex-start;
+}
+
+/* =========================== Conciertos =========================== */
+
+.gigs {
+  padding: 50px 0 0;
+}
+
+.gig-card {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 50px;
+  align-items: start;
+  margin-top: 40px;
+}
+
+.gig-poster img {
+  border-radius: 2px;
+  box-shadow: 0 20px 40px -20px rgba(23, 13, 242, 0.25);
+}
+
+.gig-info h2 {
+  font-size: 1.7rem;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  margin-bottom: 16px;
+  color: var(--ink);
+}
+
+.gig-info p {
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+
+.gig-info .btn {
+  margin-top: 26px;
+}
+
+/* =========================== Contacto =========================== */
+
+.contact {
+  padding: 60px 0 0;
+}
+
+.contact .wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 70px;
+}
+
+.contact h1 {
+  font-size: 3.2rem;
+  margin-bottom: 28px;
+}
+
+.contact-intro p {
+  margin: 0 0 22px;
+  color: var(--ink);
+}
+
+.contact-intro .email {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.contact-intro .email a {
+  color: var(--blue);
+}
+
+form.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px 34px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field.full {
+  grid-column: 1 / -1;
+}
+
+.field label {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  color: var(--ink);
+}
+
+.field input,
+.field textarea,
+.field select {
+  border: none;
+  border-bottom: 1.5px solid var(--ink);
+  padding: 8px 4px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  background: transparent;
+  color: var(--ink);
+  width: 100%;
+  max-width: 100%;
+}
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+  outline: none;
+  border-bottom-color: var(--blue);
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.phone-field {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.phone-field select {
+  width: 74px;
+  flex-shrink: 0;
+}
+
+.phone-field input {
+  flex: 1;
+  min-width: 140px;
+}
+
+.form-submit {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.form-submit .btn {
+  border: 1.5px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+}
+
+.form-submit .btn:hover {
+  background: var(--ink);
+  color: var(--white);
+}
+
+.form-status {
+  grid-column: 1 / -1;
+  font-size: 0.95rem;
+  color: var(--blue);
+  min-height: 1.2em;
+}
+
+/* =========================== Responsive =========================== */
+
+@media (max-width: 900px) {
+
+  .hero .wrap,
+  .about-hero .wrap,
+  .beyond .wrap,
+  .contact .wrap,
+  .release,
+  .gig-card {
+    grid-template-columns: 1fr;
+  }
+
+  .about-hero-photo,
+  .beyond-photo,
+  .hero-photo {
+    order: -1;
+  }
+
+  .release-cover {
+    max-width: 260px;
+  }
+
+  .hero-note {
+    max-width: 100%;
+  }
+
+  .beyond {
+    padding-top: 60px;
+  }
+}
+
+@media (max-width: 760px) {
+  :root {
+    --nav-h: 76px;
+  }
+
+  .wrap {
+    padding: 0 24px;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .main-nav {
+    position: fixed;
+    top: var(--nav-h);
+    left: 0;
+    right: 0;
+    background: var(--white);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 10px 24px 30px;
+    border-bottom: 1px solid var(--line);
+    transform: translateY(-8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .main-nav.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+    width: 100%;
+  }
+
+  .socials {
+    margin-top: 16px;
+  }
+
+  .hero {
+    padding-top: 40px;
+  }
+
+  .hero-copy h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-subtitle {
+    letter-spacing: 0.18em;
+  }
+
+  .hero-note {
+    padding: 30px 26px;
+  }
+
+  .page-hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .about-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .contact h1 {
+    font-size: 2.2rem;
+  }
+
+  .releases {
+    padding: 50px 0;
+  }
+
+  form.contact-form {
+    grid-template-columns: 1fr;
+  }
+
+  .form-submit {
+    justify-content: stretch;
+  }
+
+  .form-submit .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .gig-card {
+    gap: 30px;
+  }
+
+  .gig-poster {
+    max-width: 260px;
+  }
+
+  .beyond .wrap {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrap {
+    padding: 0 18px;
+  }
+
+  .hero-copy h1 {
+    font-size: 2rem;
+  }
+
+  .page-hero h1 {
+    font-size: 1.9rem;
+  }
+
+  .contact h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-note {
+    padding: 26px 20px;
+  }
+}

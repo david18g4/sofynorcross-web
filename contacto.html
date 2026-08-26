@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contacto — Sofy Norcross</title>
+        <meta name="description" content="Contacta con Sofy Norcross para propuestas de conciertos, entrevistas, colaboraciones y prensa.">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="wrap">
+                <a href="index.html" class="logo">SOFY NORCROSS</a>
+                <nav class="main-nav" id="main-nav">
+                    <ul class="nav-links">
+                        <li>
+                            <a href="quien-soy.html">Quién soy</a>
+                        </li>
+                        <li>
+                            <a href="conciertos.html">Conciertos</a>
+                        </li>
+                        <li>
+                            <a href="contacto.html" class="active">Contacto</a>
+                        </li>
+                    </ul>
+                    <div class="socials">
+                        <a
+                            href="https://music.apple.com/es/artist/sofy-norcross/1715212237"
+                            aria-label="Apple Music"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                            >
+                                <path d="M9 18V6l10-2v12" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="7" cy="18" r="2.2"/>
+                                <circle cx="17" cy="16" r="2.2"/>
+                            </svg>
+                        </a>
+                        <a
+                            href="https://open.spotify.com/intl-es/artist/77MdbrNtX6K6ITy4AFdntH?si=fvf7bGkWQeyb-k4wMSaZWg"
+                            aria-label="Spotify"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                            >
+                                <circle cx="12" cy="12" r="9.5"/>
+                                <path d="M7 10c3.5-1 8-.6 10.3.9M7.3 13.3c2.8-.8 6.4-.5 8.5.8M7.6 16.4c2.2-.6 5-.4 6.8.7" stroke-linecap="round"/>
+                            </svg>
+                        </a>
+                        <a
+                            href="https://www.instagram.com/sofynorcross/"
+                            aria-label="Instagram"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                            >
+                                <rect
+                                    x="3.5"
+                                    y="3.5"
+                                    width="17"
+                                    height="17"
+                                    rx="5"
+                                />
+                                <circle cx="12" cy="12" r="4"/>
+                                <circle
+                                    cx="17"
+                                    cy="7"
+                                    r="1"
+                                    fill="currentColor"
+                                    stroke="none"
+                                />
+                            </svg>
+                        </a>
+                    </div>
+                </nav>
+                <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </header>
+        <main>
+            <section class="contact">
+                <div class="wrap">
+                    <div class="contact-intro">
+                        <h1>Contacto</h1>
+                        <p>Para propuestas de conciertos, entrevistas, colaboraciones, prensa y otras cuestiones relacionadas con Sofy Norcross:</p>
+                        <p class="email">
+                            Email:
+                            <a href="mailto:sofynorcross@gmail.com">sofynorcross@gmail.com</a>
+                        </p>
+                    </div>
+                    <form class="contact-form" novalidate>
+                        <div class="field">
+                            <label for="nombre">Nombre *</label>
+                            <input
+                                type="text"
+                                id="nombre"
+                                name="nombre"
+                                required
+                            >
+                        </div>
+                        <div class="field">
+                            <label for="apellido">Apellido *</label>
+                            <input
+                                type="text"
+                                id="apellido"
+                                name="apellido"
+                                required
+                            >
+                        </div>
+                        <div class="field">
+                            <label for="email">Email *</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required
+                            >
+                        </div>
+                        <div class="field">
+                            <label for="telefono">Teléfono</label>
+                            <div class="phone-field">
+                                <input
+                                    type="text"
+                                    id="prefijo"
+                                    name="prefijo"
+                                    placeholder="+34"
+                                    aria-label="Prefijo telefónico"
+                                    maxlength="5"
+                                >
+                                <input type="tel" id="telefono" name="telefono">
+                            </div>
+                        </div>
+                        <div class="field full">
+                            <label for="mensaje">Tu mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+                        </div>
+                        <div class="field full">
+                            <label for="conocido">¿Cómo me has conocido?</label>
+                            <input type="text" id="conocido" name="conocido">
+                        </div>
+                        <div class="form-submit">
+                            <button type="submit" class="btn">Enviar</button>
+                        </div>
+                        <p class="form-status" role="status"></p>
+                    </form>
+                </div>
+            </section>
+            <div class="home-link-wrap">
+                <a href="index.html" class="btn btn-outline home-link">Inicio &rsaquo;</a>
+            </div>
+        </main>
+        <footer class="site-footer">
+            <div class="wrap">&copy; 2026 Sofy Norcross</div>
+        </footer>
+        <script src="js/script.js"></script>
+    </body>
+</html>
