@@ -1000,19 +1000,15 @@ form.contact-form {
   width: 100%;
   height: 100vh;
   height: 100dvh;
-
   background-color: rgba(22, 22, 31, 0.85);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-
   z-index: 99999;
-
   display: grid;
   place-items: center;
-
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .modal-lightbox.active {
@@ -1028,13 +1024,16 @@ form.contact-form {
   object-fit: contain;
   border-radius: 12px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-
-  transform: scale(0.9);
-  transition: transform 0.3s ease;
+  transform: scale(0.92);
+  opacity: 0;
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.35s ease;
 }
 
 .modal-lightbox.active img {
   transform: scale(1);
+  opacity: 1;
 }
 
 .modal-close {

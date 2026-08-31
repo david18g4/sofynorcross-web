@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // 1. Entra en https://web3forms.com y registra el email sofynorcross@gmail.com
   //    (te da una "Access Key" al momento, sin contraseña ni tarjeta).
   // 2. Sustituye el valor de WEB3FORMS_ACCESS_KEY de aquí abajo por esa clave.
-  var WEB3FORMS_ACCESS_KEY = 'TU_ACCESS_KEY_DE_WEB3FORMS';
+  var WEB3FORMS_ACCESS_KEY = 'c174e817-9cca-4e74-b0a1-76314d835ae2';
 
   var form = document.querySelector('.contact-form');
   if (form) {
