@@ -8,21 +8,19 @@ body {
   animation: fadeInPage 0.4s ease-in-out forwards;
 }
 
-body.page-exit {
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
 @keyframes fadeInPage {
   from {
     opacity: 0;
-    transform: translateY(6px);
   }
 
   to {
     opacity: 1;
-    transform: translateY(0);
   }
+}
+
+body.page-exit {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 :root {
@@ -260,7 +258,7 @@ h3 {
 
 .home-link-wrap {
   text-align: center;
-  margin: 90px 0 60px;
+  margin: 30px 0 30px;
 }
 
 /* =========================== Footer =========================== */
@@ -288,8 +286,8 @@ h3 {
 .hero-copy {
   display: flex;
   flex-direction: column;
-  align-items: center; 
-  text-align: center; 
+  align-items: center;
+  text-align: center;
 }
 
 .hero-copy h1 {
@@ -665,28 +663,71 @@ h3 {
 /* =========================== Conciertos =========================== */
 
 .gigs {
-  padding: 50px 0 0;
+  background: var(--white);
+  padding: 50px 0;
 }
 
+/* Tarjeta contenedora principal del concierto (fondo violeta suave) */
 .gig-card {
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 50px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-top: 40px;
+  text-align: center;
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 40px !important;
+  border-radius: 30px;
+  background-color: var(--lavender-soft);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Sub-tarjeta blanca para el cartel (con animación hover/active idéntica a la tienda) */
+.gig-poster {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 30px;
+  padding: 20px 30px !important;
+  box-shadow: 0 10px 20px -10px rgba(23, 13, 242, 0.15);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.gig-poster:hover {
+  cursor: pointer;
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(23, 13, 242, 0.25);
+  background-color: var(--white);
+}
+
+.gig-poster:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px -5px rgba(23, 13, 242, 0.3);
+  background-color: #f5f5f5;
+  transition: all 0.1s ease;
 }
 
 .gig-poster img {
-  border-radius: 2px;
-  box-shadow: 0 20px 40px -20px rgba(23, 13, 242, 0.25);
+  max-width: 260px;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px -10px rgba(22, 22, 31, 0.15);
+}
+
+.gig-info {
+  width: 100%;
 }
 
 .gig-info h2 {
   font-size: 1.7rem;
   text-decoration: underline;
   text-underline-offset: 6px;
+  margin-top: 24px;
   margin-bottom: 16px;
-  color: var(--ink);
+  color: var(--blue);
 }
 
 .gig-info p {
@@ -695,7 +736,126 @@ h3 {
 }
 
 .gig-info .btn {
-  margin-top: 26px;
+  margin-top: 24px;
+}
+
+/* =========================== Tienda =========================== */
+
+/* Fondo general de la sección tienda */
+.shop {
+  background: var(--white);
+  padding: 60px 0;
+}
+
+/* Grilla a 2 columnas en pantallas de escritorio */
+.shop .wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 36px;
+  align-items: stretch;
+}
+
+/* Tarjeta contenedor tipo póster/concierto vertical */
+.shop .release {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 36px 28px !important;
+  border-radius: 30px;
+  background-color: var(--lavender-soft);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Tarjeta interna de la foto */
+.shop .left-side {
+  width: 100%;
+  max-width: 380px;
+  background-color: var(--white);
+  border-radius: 24px;
+  padding: 20px 24px !important;
+  box-shadow: 0 10px 20px -10px rgba(23, 13, 242, 0.15);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  margin-bottom: 24px;
+}
+
+.shop .left-side:hover {
+  cursor: pointer;
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(23, 13, 242, 0.25);
+  background-color: var(--white);
+}
+
+.shop .left-side:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px -5px rgba(23, 13, 242, 0.3);
+  background-color: #f5f5f5;
+  transition: all 0.1s ease;
+}
+
+.shop .release-cover {
+  max-width: 280px;
+  margin: 0 auto 10px;
+}
+
+.shop .release-meta .kind {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+/* Lado derecho (detalles y botón) */
+.shop .right-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.shop .release-text p {
+  text-align: center;
+  font-size: 0.98rem;
+  color: var(--ink);
+  margin-bottom: 18px;
+}
+
+/* Lista de características centrada */
+.shop .product-features {
+  list-style: none;
+  margin: 0 0 24px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.shop .product-features li {
+  font-size: 0.92rem;
+  color: var(--gray);
+  padding-left: 0;
+}
+
+.shop .product-features li::before {
+  display: none;
+}
+
+.shop .btn {
+  margin-top: auto;
+  /* Empuja el botón al fondo para alinear filas perfectamente */
+}
+
+/* Ajuste Responsive: Pasa a 1 columna en tablets y móviles */
+@media (max-width: 900px) {
+  .shop .wrap {
+    grid-template-columns: 1fr;
+    max-width: 540px;
+    margin: 0 auto;
+  }
 }
 
 /* =========================== Contacto =========================== */
@@ -776,21 +936,35 @@ form.contact-form {
   min-height: 90px;
 }
 
+/* Alineación horizontal del prefijo y el número de teléfono */
 .phone-field {
   display: flex;
   align-items: flex-end;
-  gap: 10px;
-  flex-wrap: wrap;
+  gap: 12px;
 }
 
-.phone-field select {
-  width: 74px;
+.phone-field #prefijo {
+  width: 60px;
   flex-shrink: 0;
+  text-align: center;
 }
 
-.phone-field input {
+.phone-field #telefono {
   flex: 1;
-  min-width: 140px;
+}
+
+/* Sombreado violeta claro y estilos para el campo 'Tu mensaje' */
+.field textarea#mensaje {
+  background-color: var(--lavender-soft);
+  border: 1px solid var(--lavender);
+  border-radius: 12px;
+  padding: 12px 16px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field textarea#mensaje:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(23, 13, 242, 0.15);
 }
 
 .form-submit {
@@ -816,6 +990,70 @@ form.contact-form {
   font-size: 0.95rem;
   color: var(--blue);
   min-height: 1.2em;
+}
+
+/* =========================== Lightbox / Modal =========================== */
+
+.modal-lightbox {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+
+  background-color: rgba(22, 22, 31, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  z-index: 99999;
+
+  display: grid;
+  place-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal-lightbox.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-lightbox img {
+  width: auto !important;
+  height: auto !important;
+  max-width: 85vw !important;
+  max-height: 80vh !important;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.modal-lightbox.active img {
+  transform: scale(1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 2.5rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 1001;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.modal-close:hover {
+  color: var(--lavender);
+  transform: scale(1.1);
 }
 
 /* =========================== Responsive =========================== */
@@ -1007,5 +1245,18 @@ form.contact-form {
 
   .hero-note {
     padding: 26px 20px;
+  }
+}
+
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+    /* Elimina el contexto de transformación 2D */
   }
 }
