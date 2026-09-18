@@ -1,7 +1,3 @@
-// =========================================================
-// Sofy Norcross — interactividad del sitio
-// =========================================================
-
 document.addEventListener('DOMContentLoaded', function () {
   // Menú de navegación móvil
   var toggle = document.querySelector('.nav-toggle');
@@ -14,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
       toggle.classList.toggle('is-active', isOpen);
     });
 
-    // Cierra el menú al pulsar un enlace (útil en móvil)
+    // Cierra el menú al pulsar un enlace
     nav.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
         nav.classList.remove('open');
@@ -23,14 +19,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Formulario de contacto: validación + envío real mediante Web3Forms
-  // (la web no tiene backend propio, así que el envío del email lo gestiona
-  // este servicio externo gratuito: https://web3forms.com)
-  //
-  // PASOS PARA ACTIVARLO:
-  // 1. Entra en https://web3forms.com y registra el email sofynorcross@gmail.com
-  //    (te da una "Access Key" al momento, sin contraseña ni tarjeta).
-  // 2. Sustituye el valor de WEB3FORMS_ACCESS_KEY de aquí abajo por esa clave.
   var WEB3FORMS_ACCESS_KEY = 'c174e817-9cca-4e74-b0a1-76314d835ae2';
 
   var form = document.querySelector('.contact-form');
@@ -45,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
       }
 
-      // Procesar prefijo y teléfono (limpieza y formateo)
+      // Procesar prefijo y teléfono
       var prefijoInput = document.getElementById('prefijo');
       var telefonoInput = document.getElementById('telefono');
 
@@ -105,7 +93,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Crear la estructura HTML del modal
   const lightbox = document.createElement('div');
   lightbox.className = 'modal-lightbox';
   lightbox.innerHTML = `
@@ -117,15 +104,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const lightboxImg = lightbox.querySelector('img');
   const closeBtn = lightbox.querySelector('.modal-close');
 
-  // Guardar la posición del scroll antes de abrir el modal
   let scrollPosition = 0;
 
-  // 2. Función para abrir el modal centrado
   const openModal = (src, alt) => {
-    // Guardar la posición actual
     scrollPosition = window.scrollY;
 
-    // Llevar la página arriba del todo
     window.scrollTo({
       top: 0,
       left: 0,
@@ -135,15 +118,13 @@ document.addEventListener('DOMContentLoaded', () => {
     lightboxImg.src = src;
     lightboxImg.alt = alt || 'Previsualización de imagen';
     lightbox.classList.add('active');
-    document.body.style.overflow = 'hidden'; // Evita scroll de fondo
+    document.body.style.overflow = 'hidden';
   };
 
-  // 3. Función para cerrar el modal
   const closeModal = () => {
     lightbox.classList.remove('active');
     document.body.style.overflow = '';
 
-    // Volver a la posición donde estaba el usuario
     window.scrollTo({
       top: scrollPosition,
       left: 0,
@@ -151,7 +132,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  // 4. Capturar clics en las imágenes
   const triggerElements = document.querySelectorAll('.shop .left-side, .gig-poster');
   triggerElements.forEach(element => {
     element.addEventListener('click', (e) => {
@@ -161,7 +141,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 5. Eventos de cierre
   closeBtn.addEventListener('click', closeModal);
   lightbox.addEventListener('click', (e) => {
     if (e.target === lightbox) closeModal();

@@ -1,7 +1,3 @@
-/* =========================================================
-   Sofy Norcross — hoja de estilos principal
-   ========================================================= */
-
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 body {
@@ -89,7 +85,7 @@ h3 {
   font-weight: 600;
 }
 
-/* =========================== Header =========================== */
+/* Header */
 
 .site-header {
   border-bottom: 1px solid var(--line);
@@ -144,13 +140,11 @@ h3 {
   transform-origin: center;
 }
 
-/* Hover: Aumenta el tamaño de la letra sin cambiar color */
 .nav-links a:hover {
   color: var(--ink);
   transform: scale(1.15);
 }
 
-/* Selección activa: Color azul y raya inferior */
 .nav-links a.active {
   color: var(--blue);
   border-bottom-color: var(--blue);
@@ -207,7 +201,7 @@ h3 {
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
-/* =========================== Buttons =========================== */
+/* Buttons */
 
 .btn {
   display: inline-block;
@@ -261,7 +255,7 @@ h3 {
   margin: 30px 0 30px;
 }
 
-/* =========================== Footer =========================== */
+/* Footer */
 
 .site-footer {
   padding: 30px 0 50px;
@@ -270,7 +264,7 @@ h3 {
   color: var(--gray);
 }
 
-/* =========================== Hero (Inicio) =========================== */
+/* Hero = Inicio */
 
 .hero {
   padding: 80px 0 60px;
@@ -381,7 +375,7 @@ h3 {
   transform: translateY(-2px);
 }
 
-/* =========================== Page header (subpages) =========================== */
+/*  Page header  */
 
 .page-hero {
   padding: 70px 0 30px;
@@ -417,7 +411,7 @@ h3 {
   margin: 0;
 }
 
-/* =========================== Quién soy =========================== */
+/*  Quién soy  */
 
 .about-hero {
   padding: 60px 0 0;
@@ -660,14 +654,13 @@ h3 {
   justify-content: flex-start;
 }
 
-/* =========================== Conciertos =========================== */
+/*  Conciertos  */
 
 .gigs {
   background: var(--white);
   padding: 50px 0;
 }
 
-/* Tarjeta contenedora principal del concierto (fondo violeta suave) */
 .gig-card {
   display: flex;
   flex-direction: column;
@@ -682,7 +675,6 @@ h3 {
   -webkit-backdrop-filter: blur(10px);
 }
 
-/* Sub-tarjeta blanca para el cartel (con animación hover/active idéntica a la tienda) */
 .gig-poster {
   display: flex;
   justify-content: center;
@@ -739,15 +731,13 @@ h3 {
   margin-top: 24px;
 }
 
-/* =========================== Tienda =========================== */
+/*  Tienda  */
 
-/* Fondo general de la sección tienda */
 .shop {
   background: var(--white);
   padding: 60px 0;
 }
 
-/* Grilla a 2 columnas en pantallas de escritorio */
 .shop .wrap {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -755,7 +745,6 @@ h3 {
   align-items: stretch;
 }
 
-/* Tarjeta contenedor tipo póster/concierto vertical */
 .shop .release {
   display: flex;
   flex-direction: column;
@@ -770,7 +759,6 @@ h3 {
   -webkit-backdrop-filter: blur(10px);
 }
 
-/* Tarjeta interna de la foto */
 .shop .left-side {
   width: 100%;
   max-width: 380px;
@@ -823,7 +811,7 @@ h3 {
   margin-bottom: 18px;
 }
 
-/* Lista de características centrada */
+
 .shop .product-features {
   list-style: none;
   margin: 0 0 24px;
@@ -846,10 +834,9 @@ h3 {
 
 .shop .btn {
   margin-top: auto;
-  /* Empuja el botón al fondo para alinear filas perfectamente */
 }
 
-/* Ajuste Responsive: Pasa a 1 columna en tablets y móviles */
+/* 1 columna en tablets y móviles */
 @media (max-width: 900px) {
   .shop .wrap {
     grid-template-columns: 1fr;
@@ -858,7 +845,7 @@ h3 {
   }
 }
 
-/* =========================== Contacto =========================== */
+/*  Contacto  */
 
 .contact {
   padding: 60px 0 0;
@@ -936,7 +923,7 @@ form.contact-form {
   min-height: 90px;
 }
 
-/* Alineación horizontal del prefijo y el número de teléfono */
+
 .phone-field {
   display: flex;
   align-items: flex-end;
@@ -953,7 +940,6 @@ form.contact-form {
   flex: 1;
 }
 
-/* Sombreado violeta claro y estilos para el campo 'Tu mensaje' */
 .field textarea#mensaje {
   background-color: var(--lavender-soft);
   border: 1px solid var(--lavender);
@@ -992,7 +978,7 @@ form.contact-form {
   min-height: 1.2em;
 }
 
-/* =========================== Lightbox / Modal =========================== */
+/*  Lightbox / Modal  */
 
 .modal-lightbox {
   position: fixed;
@@ -1055,7 +1041,7 @@ form.contact-form {
   transform: scale(1.1);
 }
 
-/* =========================== Responsive =========================== */
+/*  Responsive  */
 
 @media (max-width: 900px) {
 
@@ -1108,7 +1094,6 @@ form.contact-form {
     background: var(--white);
     flex-direction: column;
     align-items: center;
-    /* Centrado horizontal del contenedor de items */
     gap: 0;
     padding: 10px 24px 30px;
     border-bottom: 1px solid var(--line);
@@ -1134,9 +1119,7 @@ form.contact-form {
   .nav-links {
     display: flex;
     flex-direction: column;
-    /* Cambia la lista de horizontal a vertical */
     align-items: center;
-    /* Centra los enlaces horizontalmente */
     width: 100%;
     margin: 0;
     padding: 0;
@@ -1256,6 +1239,5 @@ form.contact-form {
   to {
     opacity: 1;
     transform: none;
-    /* Elimina el contexto de transformación 2D */
   }
 }
